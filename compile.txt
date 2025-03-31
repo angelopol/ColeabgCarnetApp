@@ -1,0 +1,2 @@
+python -m PyInstaller --noconsole --onefile --windowed --icon=assets/logo.ico --hidden-import babel.numbers home.py
+python -m PyInstaller --onefile --icon=assets/logo.ico OfflineUpdates.py

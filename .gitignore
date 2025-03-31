@@ -1,0 +1,7 @@
+__pycache__/*
+build/*
+dist/*
+configuration/CloudDB.txt
+PrintedImages/*
+ProfilePhotos/*
+home.spec

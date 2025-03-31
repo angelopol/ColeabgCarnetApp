@@ -1,0 +1,10 @@
+tkinter
+pymssql
+pymysql
+datetime
+PIL
+pyodbc
+win32api
+cv2
+tkcalendar
+PyInstaller

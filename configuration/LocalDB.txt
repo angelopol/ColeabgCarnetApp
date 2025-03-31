@@ -1,0 +1,4 @@
+localhost
+root
+$0p0rt3
+carnetapp
