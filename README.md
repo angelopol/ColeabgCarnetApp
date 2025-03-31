@@ -7,3 +7,8 @@
 - Save carnets in local DB for the next time
 - Validate the members billings
 - Make carnets without internet connection and save the data when the connection return
+
+## Compile with PyInstaller
+
+- python -m PyInstaller --noconsole --onefile --windowed --icon=assets/logo.ico --hidden-import babel.numbers home.py
+- python -m PyInstaller --onefile --icon=assets/logo.ico OfflineUpdates.py
