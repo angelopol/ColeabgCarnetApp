@@ -1019,7 +1019,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                 if int(result[0]) == 0:
                     showwarning("Cédula no encontrada",
                         "El número de cédula introducido no se encuentra registrado en la base de datos del Colegio de Abogados del Estado Carabobo, intente de nuevo, si el problema persiste contacte con el soporte.", parent = root)
-                    return
+                    FinishLine()
                 
                 elif int(result[0]) == 1:
 
@@ -1089,7 +1089,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                 if int(result[0]) == 0:
                     showwarning("Cédula no encontrada",
                         "El número de cédula introducido no se encuentra registrado en la base de datos del Colegio de Abogados del Estado Carabobo, intente de nuevo, si el problema persiste contacte con el soporte.", parent = root)
-                    return
+                    FinishLine()
                 
                 elif int(result[0]) == 1:
                     FinishLine()
