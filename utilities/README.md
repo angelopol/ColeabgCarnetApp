@@ -11,4 +11,4 @@ Modify the options.txt with your preferences.
     The first line is the carnet expiration in days.
     The second line is the url of solvency web page.
 *Please dont modify this files*
-Install Printer dirvers.
+Install Printer drivers.

@@ -825,7 +825,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                 return
             elif solv[0] != None:
                 try:
-                    save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
+                    #save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
                     FinallyImagePath = (imf.FinallyImage(ImagePath, TemplateName, emision, vencimiento, apellidos, nombres, inpre, FechaInscripcion, NumeroInscripcion, folio, PrintCodClie, sangre, telefono, TemplateName == 'AbgTemplateExo.png')).replace("/", "\\")
                     imf.PrintImage(FinallyImagePath)
                     yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
@@ -890,7 +890,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                         elif solv[0] != None:
                             try:
                                 showinfo("Carnet actualizado", "¡Carnet actualizado con exito!", parent = root)
-                                save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
+                                #save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
                                 FinallyImagePath = (imf.FinallyImage(ImagePath, TemplateName, emision, vencimiento, apellidos, nombres, inpre, FechaInscripcion, NumeroInscripcion, folio, PrintCodClie, sangre, telefono, TemplateName == 'AbgTemplateExo.png')).replace("/", "\\")
                                 imf.PrintImage(FinallyImagePath)
                                 yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
@@ -912,7 +912,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                             try:
                                 db.insert("SOLV", "NumeroD, hasta, CodClie, CarnetNum2, status", ("'{}', '{}', '{}', '{}', 1").format(NumeroD, hasta.get(), CodClie, "0"), connection)
                                 showinfo("Carnet insertado", "¡Carnet insertado con exito!", parent = root)
-                                save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
+                                #save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
                                 FinallyImagePath = (imf.FinallyImage(ImagePath, TemplateName, emision, vencimiento, apellidos, nombres, inpre, FechaInscripcion, NumeroInscripcion, folio, PrintCodClie, sangre, telefono, TemplateName == 'AbgTemplateExo.png')).replace("/", "\\")
                                 imf.PrintImage(FinallyImagePath)
                                 yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
@@ -1040,7 +1040,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
 
         def FinishLine():
             try:
-                save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
+                #save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
                 FinallyImagePath = (imf.FinallyImage(ImagePath, TemplateName, emision, vencimiento, apellidos, nombres, inpre, FechaInscripcion, NumeroInscripcion, folio, PrintCodClie, sangre, telefono)).replace("/", "\\")
                 imf.PrintImage(FinallyImagePath)
                 yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
