@@ -822,7 +822,13 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
         def FinishLine():
             solv = db.SelectCodClieWithStatus("SOLV", connection, CodClie, 1)
             if solv[0] == False:
-                return
+                FinallyImagePath = (imf.FinallyImage(ImagePath, TemplateName, emision, vencimiento, apellidos, nombres, inpre, FechaInscripcion, NumeroInscripcion, folio, PrintCodClie, sangre, telefono, TemplateName == 'AbgTemplateExo.png')).replace("/", "\\")
+                imf.PrintImage(FinallyImagePath)
+                yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
+                while yesorno == False:
+                    imf.PrintImage(FinallyImagePath)
+                    yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
+                mf.NewCarnet(root)
             elif solv[0] != None:
                 try:
                     #save(root, PrintCodClie, TemplateName, apellidos, nombres, inpre, ImagePath, FechaInscripcion, NumeroInscripcion, folio, sangre, telefono)
@@ -886,7 +892,13 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
 
                         solv = db.SelectCodClieWithStatus("SOLV", connection, CodClie, 1)
                         if solv[0] == False:
-                            return
+                            FinallyImagePath = (imf.FinallyImage(ImagePath, TemplateName, emision, vencimiento, apellidos, nombres, inpre, FechaInscripcion, NumeroInscripcion, folio, PrintCodClie, sangre, telefono, TemplateName == 'AbgTemplateExo.png')).replace("/", "\\")
+                            imf.PrintImage(FinallyImagePath)
+                            yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
+                            while yesorno == False:
+                                imf.PrintImage(FinallyImagePath)
+                                yesorno = askyesno(title= "Impresión de carnet", message= "¿El carnet fue impreso correctamente?")
+                            mf.NewCarnet(root)
                         elif solv[0] != None:
                             try:
                                 showinfo("Carnet actualizado", "¡Carnet actualizado con exito!", parent = root)
@@ -1027,9 +1039,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                 
                 elif int(result[0]) > 1:
 
-                    showwarning("Error 999",
-                        "Error 999.", parent = root)
-                    return
+                    FinishLine()
 
             else:
 
@@ -1095,9 +1105,7 @@ def finish(TemplateName, CodClie, CodClieAbogado, root, emision, vencimiento, ap
                     FinishLine()
                 
                 elif int(result[0]) > 1:
-                    showwarning("Error 999",
-                        "Error 999.", parent = root)
-                    return
+                    FinishLine()
 
             else:
                 showwarning("Sin conexión a internet.",
